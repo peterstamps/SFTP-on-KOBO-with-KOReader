@@ -1,4 +1,4 @@
-qInstructions: How to use SFTP over SSH on KOBO ereaders with Nickel menu and KOReader.
+Instructions: How to use SFTP over SSH on KOBO ereaders with Nickel menu and KOReader.
 
 Quick copying of files to your ereader using any sftp client 
 For example with Android APPs: File Manager+ or Total Commander with SFTP plugin.
@@ -83,3 +83,22 @@ dropbear -E -R -p2222 -P /tmp/dropbear_koreader.pid
 10. Start ereader and go to Nickel Menu and start Dropbear_SFTP (toggle)
 11. Start the SFTP APP on your mobile and connect to the IP address using port 2222 and user: admin with password: admin and accept the public key when prompted.
 12. Now use also filezilla or other sftp clients.
+
+
+
+
+An User asked: Will this work on Kindle?
+
+Answer: I think that will work as well. The name KOBOeReader will ofcourse be different.
+Both are Linux based, so it will most likely work. It might be that Kindle's buildin firewall blocks port 2222. That should then be made open.
+
+therefore add following two lines in the script file: mydropbear.sh 
+immediately after the first line with 
+#!/bin/sh
+
+````
+iptables -A INPUT -p tcp --dport 2222 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT
+
+iptables -A OUTPUT -p tcp --sport 2222 -m conntrack --ctstate ESTABLISHED -j ACCEPT
+````
+

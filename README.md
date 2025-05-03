@@ -54,6 +54,7 @@ Identity added: /root/.ssh/id_kobo (MyKey@Kobo)
 5. Check if key.pub is added in /media/<user>/KOBOeReader/.adds/koreader/settings/SSH/authorized_keys/ (where <user> is your user login name on Linux) 
 6. Copy and Add following text in the file:  /media/<user>/KOBOeReader/.adds/nm/config   
    (Download therefore this file: add_this_in KOBOeReader_.adds_nm_config.txt)
+   
 ========START========
 menu_item :main    :Dropbear_SFTP (toggle)  :cmd_output         :500:quiet :/usr/bin/pkill -f "dropbear"
   chain_success:skip:5

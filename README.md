@@ -11,6 +11,7 @@ You must have KOReader and Nickel Menu installed on your (KOBO) ereader device (
 4. Run sudo ./sshkeypair.sh and hit enter or yes when asked for questions: 
 
 ========START========
+
 sudo ./sshkeypair.sh
 
 Generating a keypair to access your Kobo. You will be prompted for a passphrase

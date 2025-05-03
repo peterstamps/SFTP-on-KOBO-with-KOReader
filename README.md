@@ -1,4 +1,4 @@
-Instructions: How to use SFTP over SSH on KOBO ereaders with Nickel menu and KOReader.
+qInstructions: How to use SFTP over SSH on KOBO ereaders with Nickel menu and KOReader.
 
 Quick copying of files to your ereader using any sftp client 
 For example with Android APPs: File Manager+ or Total Commander with SFTP plugin.
@@ -44,14 +44,14 @@ Installing key in your SSH keyring
 'id_kobo.pub' -> '/root/.ssh/id_kobo.pub'
 
 Device found. Uploading key to device...
-'id_kobo.pub' -> '/media/<user>/KOBOeReader/.adds/koreader/settings/SSH/authorized_keys/key.pub'
+'id_kobo.pub' -> '/media/user/KOBOeReader/.adds/koreader/settings/SSH/authorized_keys/key.pub'
 
 Agent pid 5419
 Identity added: /root/.ssh/id_kobo (MyKey@Kobo)
 ```
 
 5. Check if key.pub is added in /media/user/KOBOeReader/.adds/koreader/settings/SSH/authorized_keys/ (where 'user' in path is your user login name on Linux) 
-6. Copy and Add following text in the file:  /media/<user>/KOBOeReader/.adds/nm/config   
+6. Copy and Add following text in the file:  /media/user/KOBOeReader/.adds/nm/config   
    (Download therefore this file: add_this_in KOBOeReader_.adds_nm_config.txt)
    
 ```
